@@ -2,6 +2,10 @@
 
 A private, ad-free, Spotify-style music server for music I own. [Navidrome](https://www.navidrome.org/) runs in Docker on an Azure VM, is reachable only over [Tailscale](https://tailscale.com), and is played from an iPhone with a Subsonic-compatible app.
 
+## Why I built this
+
+I wanted an ad-free, Spotify-style player for music I own, and I wanted to understand how it works instead of just installing an app. This project let me practise Docker, Linux server setup and hardening, SSH keys, private networking with Tailscale, and managing cloud costs and region restrictions on a student subscription. It runs on an Azure VM, but the same setup works on a Mac or Raspberry Pi.
+
 ## Architecture
 
 ```
