@@ -28,7 +28,7 @@ No ports are open to the public internet. The only way in, for SSH and for liste
 | Music mounted read-only (`:ro`) | The server can never modify or delete the library |
 | SSH key login, non-root user | Basic hardening; public SSH was closed once Tailscale SSH worked |
 | 1 GiB B-series VM plus a 1 GiB swap file | Cheap, and enough for a small personal library |
-
+   
 ## Cost
 
 On an Azure for Students subscription ($100 credit, 12 months):
@@ -81,6 +81,4 @@ VM_HOST=<vm-tailscale-address> ./backup.sh
 - [ ] Move to a Raspberry Pi to avoid the monthly hosting cost
 
 ## Notes
-
-- Only add music you have the rights to. Navidrome plays files you supply; it is not a streaming catalogue.
 - No IPs, tailnet names, keys or passwords are stored in this repo. Placeholders such as `<vm-tailscale-address>` need replacing with your own values.
