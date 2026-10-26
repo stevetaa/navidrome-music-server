@@ -1,0 +1,25 @@
+# Never commit music or Navidrome's database
+music/
+data/
+navidrome-backup/
+*.mp3
+*.flac
+*.m4a
+*.aac
+*.wav
+*.ogg
+*.opus
+*.aiff
+*.db
+*.db-shm
+*.db-wal
+
+# Secrets and local config
+.env
+*.pem
+*.key
+id_*
+navidrome_key*
+
+# macOS
+.DS_Store
