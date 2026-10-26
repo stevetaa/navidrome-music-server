@@ -66,8 +66,13 @@ Full steps are in [`docs/setup.md`](docs/setup.md).
 | Subscription missing from the VM form | Subscription filter and directory | Created the VM from the correct subscription |
 | `Permission denied (publickey)` / passphrase prompt | Reused an old SSH key | Made a dedicated key for this server and reset the VM's key from the portal |
 | Phone app "login failed" | Wrong user or password | Checked the same login in Safari, then reset the password in Navidrome |
+| Discord script said "Wrong username or password" | Pasted curly quotes into Terminal became part of the username | Retyped the value with a `read` prompt instead of pasting |
 
 More detail is in [`docs/troubleshooting.md`](docs/troubleshooting.md).
+
+## Discord status
+
+[`discord-presence/`](discord-presence/) shows the song I am playing, from my phone or my Mac, as a Discord status. A small Python script on my Mac asks Navidrome's Subsonic `getNowPlaying` API what is playing and sets Rich Presence through the Discord desktop app's normal local connection. It does not use a Discord user token, which would break Discord's rules. `install.sh` runs it as a macOS background service that starts at login. Setup is in [`discord-presence/README.md`](discord-presence/README.md).
 
 ## Backups
 
@@ -79,6 +84,7 @@ VM_HOST=<vm-tailscale-address> ./backup.sh
 
 ## What I would improve next
 
+- [ ] Show playback progress in the Discord status
 - [ ] A `setup-vm.sh` script to automate steps 2-3
 - [ ] Scheduled backups with cron or launchd
 - [ ] An uptime check and a disk-space alert

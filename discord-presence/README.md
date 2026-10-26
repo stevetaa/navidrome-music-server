@@ -33,6 +33,21 @@ is never used, and nothing extra runs on the server.
 
 In Discord, **Settings > Activity Privacy** must have activity sharing switched on.
 
+## Run it in the background (macOS)
+
+Running `python presence.py` in Terminal stops when you close the window. To keep it
+running, run the installer instead of step 3:
+
+```bash
+chmod +x install.sh run.sh uninstall.sh
+./install.sh
+```
+
+It asks for your details, saves them in `~/.config/navidrome-presence.env` (outside the
+repo, readable only by you), and registers a launchd service that starts at login and
+restarts if it stops. Logs are in `~/Library/Logs/navidrome-presence.log`.
+Run `./uninstall.sh` to remove it (`--forget` also deletes the saved details).
+
 ## Limits
 
 - Needs the Mac on, Discord open and Tailscale connected.
